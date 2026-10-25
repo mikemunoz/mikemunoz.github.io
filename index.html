@@ -142,11 +142,12 @@
 				position: absolute; top: 0; left: 0;
 				font-size: 1.75em; width: 2.5em; height: 2.5em;
 				background-color: #fff;
-				-webkit-mask: var(--logo) center / 40% no-repeat;
-				mask: var(--logo) center / 40% no-repeat;
+				-webkit-mask: var(--logo) center / var(--logo-size, 40%) no-repeat;
+				mask: var(--logo) center / var(--logo-size, 40%) no-repeat;
 			}
 			#header nav a.webex { --logo: url("assets/icons/webex.svg"); }
 			#header nav a.teams { --logo: url("assets/icons/microsoftteams.svg"); }
+			#header nav a.credly { --logo: url("assets/icons/credly.svg"); --logo-size: 66%; }
 
 			#footer {
 				position: relative;
@@ -181,7 +182,7 @@
 								<li><a href="mailto:mike@prorouting.com" class="icon solid fa-envelope" title="Email"><span class="label">Email</span></a></li>
 								<li><a href="webexteams://im?email=Mike.Munoz@arktci.com" class="logo webex" title="Message on Webex"><span class="label">Webex</span></a></li>
 								<li><a href="https://teams.microsoft.com/l/chat/0/0?users=Mike.Munoz@arktci.com" class="logo teams" title="Chat on Microsoft Teams"><span class="label">Microsoft Teams</span></a></li>
-								<li><a href="https://www.credly.com/users/mike-munoz/badges" class="icon solid fa-certificate" title="Certifications on Credly"><span class="label">Certifications</span></a></li>
+								<li><a href="https://www.credly.com/users/mike-munoz/badges" class="logo credly" title="Certifications on Credly"><span class="label">Certifications</span></a></li>
 								<li><a href="https://github.com/mikemunoz" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
 							</ul>
 						</nav>
