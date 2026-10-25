@@ -4,47 +4,312 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Mike Munoz Contact page</title>
+		<title>ProRouting | Mike Munoz, CCIE #9751</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Mike Munoz, CCIE #9751. Network, security, cloud and data center solution architect focused on Cisco technologies for enterprise, mid-market, healthcare and manufacturing organizations." />
+		<link rel="canonical" href="https://www.prorouting.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.prorouting.com/" />
+		<meta property="og:title" content="ProRouting | Mike Munoz, CCIE #9751" />
+		<meta property="og:description" content="Solution architecture across networking, security, cloud and data center for enterprise, mid-market, healthcare and manufacturing organizations." />
+		<meta property="og:image" content="https://www.prorouting.com/assets/og-image.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="theme-color" content="#348cb2" />
+		<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+		<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Mike Munoz",
+			"jobTitle": "Technical Client Director",
+			"worksFor": { "@type": "Organization", "name": "Ark Technology Consultants" },
+			"url": "https://www.prorouting.com/",
+			"sameAs": [
+				"https://www.linkedin.com/in/cciemike/",
+				"https://github.com/mikemunoz",
+				"https://www.credly.com/users/mike-munoz/badges"
+			]
+		}
+		</script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Let the page scroll over the fixed Aerial background */
+			body { overflow-x: hidden; overflow-y: auto; }
+			#page { position: relative; z-index: 1; }
+			#main {
+				position: relative;
+				height: auto;
+				min-height: 100vh;
+				min-height: 100svh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#main:before { display: none; }
+			#header { top: 0; }
+
+			.scroll-cue {
+				position: absolute; left: 50%; bottom: 2em;
+				transform: translateX(-50%);
+				border: 0; opacity: 0.75; font-size: 1.25em;
+				animation: cue 2s 4.5s ease-in-out infinite both;
+			}
+			@keyframes cue {
+				0%, 100% { opacity: 0; transform: translate(-50%, 0); }
+				50% { opacity: 0.75; transform: translate(-50%, 0.4em); }
+			}
+
+			.section {
+				max-width: 64em;
+				margin: 0 auto;
+				padding: 3em 1.5em;
+				text-align: center;
+				text-shadow: 0 1px 6px rgba(0, 40, 70, 0.45);
+			}
+			.section h2 {
+				font-size: 2.5em;
+				font-weight: 900;
+				letter-spacing: -0.035em;
+				line-height: 1.1em;
+				margin: 0 0 0.4em 0;
+			}
+			.section .lede {
+				font-size: 1.15em;
+				opacity: 0.85;
+				max-width: 42em;
+				margin: 0 auto 2em auto;
+			}
+			.panels {
+				display: grid;
+				gap: 1.25em;
+				grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+				text-align: left;
+			}
+			.panel {
+				background: rgba(20, 70, 105, 0.35);
+				border: solid 1px rgba(255, 255, 255, 0.45);
+				border-radius: 6px;
+				padding: 1.5em;
+				-webkit-backdrop-filter: blur(6px);
+				backdrop-filter: blur(6px);
+			}
+			.panel > .icon:before {
+				display: inline-block;
+				width: 2.5em; height: 2.5em; line-height: 2.5em;
+				border: solid 1px #fff;
+				border-radius: 100%;
+				text-align: center;
+				margin-bottom: 0.75em;
+			}
+			.panel h3 {
+				font-size: 1.2em;
+				font-weight: 900;
+				letter-spacing: -0.02em;
+				line-height: 1.3em;
+				margin: 0 0 0.35em 0;
+			}
+			.panel p { margin: 0; opacity: 0.85; line-height: 1.6em; }
+
+			.contact-panel { text-align: center; padding: 2.5em 1.5em; }
+			.contact-panel p { margin-bottom: 1.5em; }
+			.button {
+				display: inline-block;
+				border: solid 1px #fff;
+				border-radius: 2em;
+				padding: 0.6em 1.75em;
+				transition: background-color 0.2s ease-in-out;
+			}
+			.button:hover { background-color: rgba(255, 255, 255, 0.175); }
+			.button.icon:before { margin-right: 0.6em; }
+			.actions {
+				display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75em;
+			}
+			#header .actions { margin-top: 1.25em; }
+
+			/* Webex and Teams logos (Simple Icons, CC0) drawn to match the Font Awesome circles */
+			#header nav a.logo { position: relative; }
+			#header nav a.logo:before { content: "\00a0"; }
+			#header nav a.logo:after {
+				content: "";
+				position: absolute; top: 0; left: 0;
+				font-size: 1.75em; width: 2.5em; height: 2.5em;
+				background-color: #fff;
+				-webkit-mask: var(--logo) center / var(--logo-size, 40%) no-repeat;
+				mask: var(--logo) center / var(--logo-size, 40%) no-repeat;
+			}
+			#header nav a.webex { --logo: url("assets/icons/webex.svg"); }
+			#header nav a.teams { --logo: url("assets/icons/microsoftteams.svg"); }
+			#header nav a.credly { --logo: url("assets/icons/credly.svg"); --logo-size: 66%; }
+
+			#footer {
+				position: relative;
+				height: auto;
+				line-height: 1.75em;
+				padding: 3em 1em 2em 1em;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+			}
+
+			@media screen and (max-width: 736px) {
+				.section { padding: 2em 1.25em; }
+				.section h2 { font-size: 2em; }
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="bg"></div>
 			<div id="overlay"></div>
+		</div>
+
+		<div id="page">
 			<div id="main">
 
 				<!-- Header -->
 					<header id="header">
 						<h1>Mike Munoz</h1>
-						<p>Working at NetCraftsmen | Client Focused | Technical Leadership | CCIE 9751</p>
+						<p>Technical Client Director, Ark Technology Consultants | ProRouting | CCIE #9751</p>
 						<nav>
 							<ul>
-								<li><a href="https://twitter.com/prorouting" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.linkedin.com/in/cciemike/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/mikemunoz" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="webexteams://im?email=mmunoz@netcraftsmen.com" class="far fa-comments"><span class="label">comments</span></a></li>
-								<li><a href="mailto:mike@prorouting.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-								<li><a href="https://www.credly.com/users/mike-munoz/badges#" class="fas fa-certificate"><span class="label">Certificates</span></a></li>
+								<li><a href="https://www.linkedin.com/in/cciemike/" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:mike@prorouting.com" class="icon solid fa-envelope" title="Email"><span class="label">Email</span></a></li>
+								<li><a href="webexteams://im?email=Mike.Munoz@arktci.com" class="logo webex" title="Message on Webex"><span class="label">Webex</span></a></li>
+								<li><a href="https://teams.microsoft.com/l/chat/0/0?users=Mike.Munoz@arktci.com" class="logo teams" title="Chat on Microsoft Teams"><span class="label">Microsoft Teams</span></a></li>
+								<li><a href="https://www.credly.com/users/mike-munoz/badges" class="logo credly" title="Certifications on Credly"><span class="label">Certifications</span></a></li>
+								<li><a href="https://github.com/mikemunoz" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
 							</ul>
 						</nav>
+						<div class="actions">
+							<a href="https://bookings.cloud.microsoft/bookwithme/user/a20a8ef0b23b4fe59b8c553771d6914e@arktci.com?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" class="button icon solid fa-calendar-alt">Schedule a meeting</a>
+							<a href="mike-munoz.vcf" download class="button icon solid fa-address-card">Add to contacts</a>
+						</div>
 					</header>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; Mike Munoz. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-					</footer>
-
+					<a href="#about" class="scroll-cue icon solid fa-chevron-down"><span class="label" style="display:none">More</span></a>
 			</div>
+
+			<!-- About -->
+				<section id="about" class="section">
+					<h2>About</h2>
+					<p class="lede">
+						I'm Mike Munoz, Technical Client Director at Ark Technology Consultants. I help enterprise,
+						mid-market, healthcare and manufacturing organizations design and deliver networking,
+						security, cloud and data center solutions built on Cisco technologies.
+					</p>
+				</section>
+
+			<!-- Focus areas -->
+				<section id="focus" class="section">
+					<h2>Focus Areas</h2>
+					<p class="lede">Architecture across the full infrastructure stack, from the campus edge to the data center and cloud.</p>
+					<div class="panels">
+						<div class="panel">
+							<span class="icon solid fa-network-wired"></span>
+							<h3>Enterprise Networking</h3>
+							<p>Campus, branch, WAN and SD-WAN designs built for availability, scale and simpler operations.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-shield-alt"></span>
+							<h3>Security</h3>
+							<p>Firewall, segmentation, identity and secure access architectures aligned to risk and compliance.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-cloud"></span>
+							<h3>Cloud</h3>
+							<p>Hybrid and multi-cloud connectivity, security and operations that extend the on-prem estate cleanly.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-server"></span>
+							<h3>Data Center</h3>
+							<p>Fabric, compute and storage networking designs that support modernization and growth.</p>
+						</div>
+					</div>
+				</section>
+
+			<!-- How I help -->
+				<section id="approach" class="section">
+					<h2>How I Help</h2>
+					<p class="lede">I work with technical and business stakeholders to turn requirements into designs that can be scoped, priced and delivered with confidence.</p>
+					<div class="panels">
+						<div class="panel">
+							<span class="icon solid fa-project-diagram"></span>
+							<h3>Solution Design</h3>
+							<p>Discovery, current-state assessment and target architectures that map to business outcomes.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-file-signature"></span>
+							<h3>Proposals and SOWs</h3>
+							<p>Clear scope, assumptions and deliverables so projects start aligned and finish on plan.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-clipboard-check"></span>
+							<h3>RFP and RFI Responses</h3>
+							<p>Technically sound, compliant responses that show how the solution meets each requirement.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-handshake"></span>
+							<h3>Technical Leadership</h3>
+							<p>A trusted advisor from first conversation through handoff to delivery.</p>
+						</div>
+					</div>
+				</section>
+
+			<!-- Who I work with -->
+				<section id="clients" class="section">
+					<h2>Who I Work With</h2>
+					<p class="lede">Organizations where the network is critical to the mission.</p>
+					<div class="panels">
+						<div class="panel">
+							<span class="icon solid fa-building"></span>
+							<h3>Enterprise</h3>
+							<p>Large, distributed environments that need consistent architecture and governance.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-hospital"></span>
+							<h3>Healthcare</h3>
+							<p>Clinical and operational networks where uptime, security and compliance are non-negotiable.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-industry"></span>
+							<h3>Manufacturing</h3>
+							<p>Plant and production networks where IT/OT convergence, uptime and security drive the design.</p>
+						</div>
+						<div class="panel">
+							<span class="icon solid fa-chart-line"></span>
+							<h3>Mid-market</h3>
+							<p>Growing organizations that need enterprise-grade design without enterprise-sized teams.</p>
+						</div>
+					</div>
+				</section>
+
+			<!-- Contact -->
+				<section id="contact" class="section">
+					<div class="panel contact-panel">
+						<h2>Let's Talk</h2>
+						<p>Planning a refresh, a new site, a security initiative or an RFP? Reach out and let's start the conversation.</p>
+						<div class="actions">
+							<a href="https://bookings.cloud.microsoft/bookwithme/user/a20a8ef0b23b4fe59b8c553771d6914e@arktci.com?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" class="button icon solid fa-calendar-alt">Schedule a meeting</a>
+							<a href="mike-munoz.vcf" download class="button icon solid fa-address-card">Add to contacts</a>
+							<a href="mailto:mike@prorouting.com" class="button icon solid fa-envelope">mike@prorouting.com</a>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<span class="copyright">&copy; Mike Munoz. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+				</footer>
 		</div>
+
 		<script>
 			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
 	</body>
 </html>
