@@ -20,6 +20,9 @@
 		<meta property="og:image:height" content="630" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="theme-color" content="#348cb2" />
+		<!-- The design is already dark (white on blue); ask dark-mode extensions such as Dark Reader and Noir not to restyle it -->
+		<meta name="color-scheme" content="dark" />
+		<meta name="darkreader-lock" />
 		<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 		<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
 		<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -41,6 +44,9 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			:root { color-scheme: dark; }
+			html, body { background-color: #1d5673; }
+
 			/* Let the page scroll over the fixed Aerial background */
 			body { overflow: visible; }
 			#page { position: relative; z-index: 1; }
