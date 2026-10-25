@@ -15,7 +15,14 @@
 		<meta property="og:url" content="https://www.prorouting.com/" />
 		<meta property="og:title" content="ProRouting | Mike Munoz, CCIE #9751" />
 		<meta property="og:description" content="Solution architecture across networking, security, cloud and data center for enterprise, mid-market, healthcare and manufacturing organizations." />
-		<meta name="twitter:card" content="summary" />
+		<meta property="og:image" content="https://www.prorouting.com/assets/og-image.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="theme-color" content="#348cb2" />
+		<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+		<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+		<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -94,7 +101,7 @@
 				-webkit-backdrop-filter: blur(6px);
 				backdrop-filter: blur(6px);
 			}
-			.panel .icon:before {
+			.panel > .icon:before {
 				display: inline-block;
 				width: 2.5em; height: 2.5em; line-height: 2.5em;
 				border: solid 1px #fff;
@@ -121,6 +128,25 @@
 				transition: background-color 0.2s ease-in-out;
 			}
 			.button:hover { background-color: rgba(255, 255, 255, 0.175); }
+			.button.icon:before { margin-right: 0.6em; }
+			.actions {
+				display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75em;
+			}
+			#header .actions { margin-top: 1.25em; }
+
+			/* Webex and Teams logos (Simple Icons, CC0) drawn to match the Font Awesome circles */
+			#header nav a.logo { position: relative; }
+			#header nav a.logo:before { content: "\00a0"; }
+			#header nav a.logo:after {
+				content: "";
+				position: absolute; top: 0; left: 0;
+				font-size: 1.75em; width: 2.5em; height: 2.5em;
+				background-color: #fff;
+				-webkit-mask: var(--logo) center / 40% no-repeat;
+				mask: var(--logo) center / 40% no-repeat;
+			}
+			#header nav a.webex { --logo: url("assets/icons/webex.svg"); }
+			#header nav a.teams { --logo: url("assets/icons/microsoftteams.svg"); }
 
 			#footer {
 				position: relative;
@@ -151,12 +177,18 @@
 						<p>Technical Client Director, Ark Technology Consultants | ProRouting | CCIE #9751</p>
 						<nav>
 							<ul>
-								<li><a href="https://www.linkedin.com/in/cciemike/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/mikemunoz" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="mailto:mike@prorouting.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-								<li><a href="https://www.credly.com/users/mike-munoz/badges" class="icon solid fa-certificate"><span class="label">Certifications</span></a></li>
+								<li><a href="https://www.linkedin.com/in/cciemike/" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:mike@prorouting.com" class="icon solid fa-envelope" title="Email"><span class="label">Email</span></a></li>
+								<li><a href="webexteams://im?email=Mike.Munoz@arktci.com" class="logo webex" title="Message on Webex"><span class="label">Webex</span></a></li>
+								<li><a href="https://teams.microsoft.com/l/chat/0/0?users=Mike.Munoz@arktci.com" class="logo teams" title="Chat on Microsoft Teams"><span class="label">Microsoft Teams</span></a></li>
+								<li><a href="https://www.credly.com/users/mike-munoz/badges" class="icon solid fa-certificate" title="Certifications on Credly"><span class="label">Certifications</span></a></li>
+								<li><a href="https://github.com/mikemunoz" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
 							</ul>
 						</nav>
+						<div class="actions">
+							<a href="https://bookings.cloud.microsoft/bookwithme/user/a20a8ef0b23b4fe59b8c553771d6914e@arktci.com?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" class="button icon solid fa-calendar-alt">Schedule a meeting</a>
+							<a href="mike-munoz.vcf" download class="button icon solid fa-address-card">Add to contacts</a>
+						</div>
 					</header>
 
 					<a href="#about" class="scroll-cue icon solid fa-chevron-down"><span class="label" style="display:none">More</span></a>
@@ -261,7 +293,11 @@
 					<div class="panel contact-panel">
 						<h2>Let's Talk</h2>
 						<p>Planning a refresh, a new site, a security initiative or an RFP? Reach out and let's start the conversation.</p>
-						<a href="mailto:mike@prorouting.com" class="button">mike@prorouting.com</a>
+						<div class="actions">
+							<a href="https://bookings.cloud.microsoft/bookwithme/user/a20a8ef0b23b4fe59b8c553771d6914e@arktci.com?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" class="button icon solid fa-calendar-alt">Schedule a meeting</a>
+							<a href="mike-munoz.vcf" download class="button icon solid fa-address-card">Add to contacts</a>
+							<a href="mailto:mike@prorouting.com" class="button icon solid fa-envelope">mike@prorouting.com</a>
+						</div>
 					</div>
 				</section>
 
