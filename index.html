@@ -134,20 +134,20 @@
 			}
 			#header .actions { margin-top: 1.25em; }
 
-			/* Webex and Teams logos (Simple Icons, CC0) drawn to match the Font Awesome circles */
+			/* Webex, Teams and Credly logos (Simple Icons, CC0, recolored white) drawn to match the Font Awesome circles */
 			#header nav a.logo { position: relative; }
 			#header nav a.logo:before { content: "\00a0"; }
 			#header nav a.logo:after {
 				content: "";
 				position: absolute; top: 0; left: 0;
 				font-size: 1.75em; width: 2.5em; height: 2.5em;
-				background-color: #fff;
-				-webkit-mask: var(--logo) center / var(--logo-size, 40%) no-repeat;
-				mask: var(--logo) center / var(--logo-size, 40%) no-repeat;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 40% auto;
 			}
-			#header nav a.webex { --logo: url("assets/icons/webex.svg"); }
-			#header nav a.teams { --logo: url("assets/icons/microsoftteams.svg"); }
-			#header nav a.credly { --logo: url("assets/icons/credly.svg"); --logo-size: 66%; }
+			#header nav a.webex:after { background-image: url("assets/icons/webex.svg"); }
+			#header nav a.teams:after { background-image: url("assets/icons/microsoftteams.svg"); }
+			#header nav a.credly:after { background-image: url("assets/icons/credly.svg"); background-size: 66% auto; }
 
 			#footer {
 				position: relative;
@@ -213,7 +213,7 @@
 						<div class="panel">
 							<span class="icon solid fa-network-wired"></span>
 							<h3>Enterprise Networking</h3>
-							<p>Campus, branch, WAN and SD-WAN designs built for availability, scale and simpler operations.</p>
+							<p>Campus, branch, wireless, WAN and SD-WAN designs built for availability, scale and simpler operations.</p>
 						</div>
 						<div class="panel">
 							<span class="icon solid fa-shield-alt"></span>
@@ -297,7 +297,7 @@
 						<div class="actions">
 							<a href="https://bookings.cloud.microsoft/bookwithme/user/a20a8ef0b23b4fe59b8c553771d6914e@arktci.com?anonymous&amp;ismsaljsauthenabled&amp;ep=plink" class="button icon solid fa-calendar-alt">Schedule a meeting</a>
 							<a href="mike-munoz.vcf" download class="button icon solid fa-address-card">Add to contacts</a>
-							<a href="mailto:mike@prorouting.com" class="button icon solid fa-envelope">mike@prorouting.com</a>
+							<a href="mailto:Mike.Munoz@arktci.com" class="button icon solid fa-envelope">Mike.Munoz@arktci.com</a>
 						</div>
 					</div>
 				</section>
